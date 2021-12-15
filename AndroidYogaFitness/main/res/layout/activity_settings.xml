@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:padding="16dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rdiEasy"
+                android:text="Easy"
+                android:theme="@style/MyRadioButton"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/rdiMedium"
+                android:text="Medium"
+                android:theme="@style/MyRadioButton"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/rdiHard"
+                android:text="Hard"
+                android:theme="@style/MyRadioButton"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </RadioGroup>
+
+    </android.support.v7.widget.CardView>
+
+    <io.ghyeok.stickyswitch.widget.StickySwitch
+        android:id="@+id/switchAlarm"
+        android:layout_width="150dp"
+        android:layout_height="88dp"
+        android:layout_below="@id/cardview"
+        android:layout_centerHorizontal="true"
+        app:ss_iconPadding="18dp"
+        app:ss_iconSize="25dp"
+        app:ss_leftIcon="@drawable/ic_done"
+        app:ss_leftText="ON"
+        app:ss_rightIcon="@drawable/ic_clear"
+        app:ss_rightText="OFF"
+        app:ss_selectedTextSize="14sp"
+        app:ss_sliderBackgroundColor="#1e1e1e"
+        app:ss_switchColor="#074d71"
+        app:ss_textColor="#074d71"
+        app:ss_textSize="18sp" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_below="@id/switchAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/btnSave"
+        android:text="Save"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/white"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fButtonColor="@color/colorPrimary"
+        app:shadowColor="@color/colorPrimaryDark"
+        app:shadowEnabled="true"
+        app:shadowHeight="5dp"
+        app:cornerRadius="5dp"/>
+
+</RelativeLayout>
